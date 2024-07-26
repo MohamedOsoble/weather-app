@@ -9,11 +9,30 @@
 </head>
 <body>
     <h1>Weather App</h1>
-    <div class="head">City name goes here</div>
-    <div class="temp-container">
-        <div class="temp-stats" id="temp-current">Current Temp goes here </div>
-        <div class="temp-stats" id="temp-max">Max temp today</div>
-        <div class="temp-stats" id="temp-min">Min temp today</div>
+    <div class="container">
+        <div class="results-container">
+            <div class="temp-city" id="temp-city">City name goes here</div>
+            <div class="temp-container">
+                <div class="temp-card">
+                    <div class="temp-stats" id="temp-current-title">Current Temp: </div>
+                    <div class="temp-stats" id="temp-current-value"></div>
+                </div>
+                <div class="temp-card">
+                    <div class="temp-stats" id="temp-max-title">Max Today: </div>
+                    <div class="temp-stats" id="temp-max-value"></div>
+                </div>
+                <div class="temp-card">
+                    <div class="temp-stats" id="temp-min-title">Min Today: </div>
+                    <div class="temp-stats" id="temp-min-value"></div>
+                </div>
+                <div class="temp-visual-container" id="temp-visual-container">
+                    <div class="temp-image" id="temp-image">
+                        some image to describe temp
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>

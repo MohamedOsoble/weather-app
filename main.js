@@ -8,7 +8,7 @@ function queryBuilder(location){
 
 };
 
-function fetchData(){
+function fetchData(location){
     let data = fetch("")
     console.log("Access the data from the API")
 };
