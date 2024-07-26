@@ -18,16 +18,29 @@ function queryBuilder(location){
 };
 
 function fetchData(location){
-    let data = fetch("")
-    console.log("Access the data from the API")
+    let data = fetch(queryBuilder(location), {mode: 'cors'})
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(response){
+        processData(response)
+    })
+    .catch(function(err) {
+        console.log("Got an error")
+        console.log(err)
+    })
 };
 
-function processData(){
-    console.log("Process the data from the API JSON")
+function processData(data){
+    cityNameElement.innerHTML = data.address;
+    currentTempElement.innerHTML = data.currentConditions.temp;
+    maxTempElement.innerHTML = data.days[0].tempmax
+    minTempElement.innerHTML = data.days[0].tempmin
+    console.log(data)
 };
 
-function processInput(){
-    console.log("process the data the user inputs")
+function processInput(location){
+    fetchData(location)
 };
 
-console.log(queryBuilder("London"));
+processInput("London");
