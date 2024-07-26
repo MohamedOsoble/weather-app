@@ -1,7 +1,16 @@
+// Set up API website and API Key
+
 const APIKEY = "HT5ZKT8RYEGF3V64XZFXSYZ75"
 const APISITESTART = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
 const APISITEEND = "?unitGroup=metric&include=events%2Cdays%2Ccurrent%2Chours%2Calerts&key=" + APIKEY + "&contentType=json"
 
+// Initialize HTML elements to update with weather
+
+let cityNameElement = document.getElementById('temp-city');
+let currentTempElement = document.getElementById('temp-current-value');
+let maxTempElement = document.getElementById('temp-max-value');
+let minTempElement = document.getElementById('temp-min-value');
+let weatherImageElement = document.getElementById('weather-image')
 
 function queryBuilder(location){
     return APISITESTART + location + APISITEEND
