@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "simple weather app",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamedOsoble/weather-app.git"
+  },
+  "author": "Mohamed Osoble",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamedOsoble/weather-app/issues"
+  },
+  "homepage": "https://github.com/MohamedOsoble/weather-app#readme",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
