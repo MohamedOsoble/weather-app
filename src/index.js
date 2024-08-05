@@ -1,3 +1,6 @@
+// Set imports for project
+import './style.css';
+
 // Set up API website and API Key
 
 const APIKEY = "HT5ZKT8RYEGF3V64XZFXSYZ75"
@@ -32,7 +35,7 @@ function fetchData(location){
 };
 
 function processData(data){
-    currCitylement.innerHTML = data.address;
+    currCitylement.innerHTML = "Location: " + data.address;
     currentTempElement.innerHTML = data.currentConditions.temp;
     maxTempElement.innerHTML = data.days[0].tempmax
     minTempElement.innerHTML = data.days[0].tempmin

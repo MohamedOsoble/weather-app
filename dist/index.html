@@ -8,8 +8,16 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
-    <h1>Weather App</h1>
     <div class="container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <div class="search-bar-container">
+                <input id="search-box" type="text" placeholder="Search Location...">
+            </div>
+            <div class="search-button-container">
+                <button id="search-btn" type="submit">Find</button>
+            </div>
+        </div>
         <div class="results-container">
             <div class="current-city" id="current-city">City name goes here</div>
             <div class="temp-container">
@@ -32,7 +40,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
