@@ -1,7 +1,3 @@
-// Set imports for project
-// import { container } from 'webpack';
-// import './style.css';
-
 // Set up API website and API Key
 const APIKEY = "HT5ZKT8RYEGF3V64XZFXSYZ75"
 const APISITESTART = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"
@@ -39,8 +35,6 @@ const currFeelsLike = document.getElementById('curr-feels-like');
 const weeklyContainer = document.getElementById('forecast-card-container');
 const weeklyForecast = document.getElementById('weekly-title');
 
-//Initialize button to handle updating location/temp
-//document.getElementById('search-button').addEventListener("click", console.log(document.getElementById('location-search').value))
 
 function queryBuilder(location){
     return APISITESTART + location + APISITEEND
@@ -62,7 +56,6 @@ function fetchData(location){
 };
 
 function processData(data){
-    console.log(data)
     currCity.textContent = data.resolvedAddress;
     currDate.textContent = getDate() + " " + data.currentConditions.datetime;
     currTemp.textContent = data.currentConditions.temp + DEGREE;
@@ -72,9 +65,6 @@ function processData(data){
     currFeelsLike.textContent = "Feels like: " + data.currentConditions.feelslike + DEGREE
     currMinMax.textContent = "Min Today: " + data.days[0].tempmin + DEGREE + " | Max Today: " + data.days[0].tempmax + DEGREE;
     processForecast(data.days);
-    // currMinMax.innerHTML = data.days[0].tempmax
-    // feelsLikeTemp.innerHTML = data.days[0].tempmin
-    // console.log(data)
 };
 
 function processInput(location){
@@ -119,9 +109,9 @@ function genForecastCard(forecast, day){
     date = new Date(forecast.datetime);
     weekDay = dayOfWeek[date.getDay()];
 
-    console.log(getIcon(forecast.icon));
-    console.log(iconDiv);
+    // Update card content
     iconDiv.src = getIcon(forecast.icon);
+    iconDiv.alt = forecast.icon + ' icon'
     dateDiv.textContent = weekDay;
     tempHigh.textContent = 'High: ' + forecast.tempmax + DEGREE;
     tempLow.textContent = 'Low: ' + forecast.tempmin + DEGREE;
@@ -130,7 +120,6 @@ function genForecastCard(forecast, day){
 
 function createDiv(){
     let div = document.createElement('div');
-    console.log(div)
     return div
 };
 
