@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Osoble Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="search-form-container" class="search-form-container">
+            <form id="search-form" action="submit">
+                <label for="location-search">
+                    <input type="search" placeholder="Search location" autocomplete="off" id="location-search" required>
+                </label>
+                <button id="search-button" type="submit">Search</button>
+            </form>
+        </div>
+        <div id="content-location-container">
+            <h1 id="curr-location">London, England, United Kingdom</h1>
+            <h2 id="curr-date">Monday 5 August 2024 | 19:10</h2>
+        </div>
+        <div id="content-temp-container">
+            <h3 id="curr-forecast">Current Conditions:</h3>
+            <div id="curr-temp-container">
+                <img id="curr-weather-img">
+                <div id="curr-temp" class="temp">20.8°C</div>
+            </div>
+            <div id="curr-weather-desc-container">
+                <div id="curr-weather-desc">Partially Cloudy</div>
+                <div id="curr-feels-like">20.8°C</div>
+                <div id="curr-min-max">22.4° / 18°C</div>
+            </div>
+        </div>
+        <div id="weekly-container">
+            <div id="weekly-title"><h3>Weekly Forecast:</h3></div>
+            <div id="forecast-card-container">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
